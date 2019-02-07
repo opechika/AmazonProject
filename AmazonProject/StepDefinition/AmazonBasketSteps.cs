@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using AmazonProject.Helper;
+using AmazonProject.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,18 +10,20 @@ using TechTalk.SpecFlow;
 namespace AmazonProject.StepDefinition
 {
     [Binding]
-    public sealed class AmazonBasketSteps
+    public sealed class AmazonBasketSteps : BaseClass
     {
+        AmazonHomePage amazonHomePage = new AmazonHomePage();
+
         [Given(@"I am on Amazon homepage")]
         public void GivenIAmOnAmazonHomepage()
         {
-           
+            amazonHomePage.IsHomePageDisplayed(); 
         }
 
         [When(@"I enter ""(.*)"" in the search bar")]
-        public void WhenIEnterInTheSearchBar(string p0)
+        public void WhenIEnterInTheSearchBar(string item)
         {
-            
+            amazonHomePage.EnteraAnItemToSearchBar(item);
         }
 
         [When(@"i click on submit button")]
