@@ -55,7 +55,7 @@ namespace AmazonProject.Helper
                     break;
                 default:
                     Console.WriteLine(browser + " is not recognised. So Firfox is launched instead");
-                    driver = initialiseFirefox();
+                    driver = initialiseChrome();
                     break;
             }
 
