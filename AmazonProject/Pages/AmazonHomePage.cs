@@ -13,6 +13,7 @@ namespace AmazonProject.Pages
     {
         IWebElement logo;
         IWebElement searchbar;
+        IWebElement button;
 
         public void IsHomePageDisplayed()
         {
@@ -24,6 +25,12 @@ namespace AmazonProject.Pages
         {
             searchbar = GetElementById("twotabsearchtextbox");
             searchbar.SendKeys(item);
+        }
+        public ResultPage ClickOnButton()
+        {
+            button = GetElementByClassName("nav-input");
+            button.Click();
+            return new ResultPage();
         }
     }
 }
