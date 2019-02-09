@@ -13,6 +13,7 @@ namespace AmazonProject.StepDefinition
     public sealed class AmazonBasketSteps : BaseClass
     {
         AmazonHomePage amazonHomePage = new AmazonHomePage();
+        ResultPage resultPage = new ResultPage();
 
         [Given(@"I am on Amazon homepage")]
         public void GivenIAmOnAmazonHomepage()
@@ -29,19 +30,20 @@ namespace AmazonProject.StepDefinition
         [When(@"i click on submit button")]
         public void WhenIClickOnSubmitButton()
         {
-            
+            resultPage = amazonHomePage.ClickOnButton(); 
         }
 
         [When(@"the result of ""(.*)"" is displayed")]
         public void WhenTheResultOfIsDisplayed(string p0)
         {
-            
+            resultPage.IsResultTitleDisplayed();
+            resultPage.IsResultDisplayed();
         }
 
         [When(@"I select the echo dot of my choice")]
         public void WhenISelectTheEchoDotOfMyChoice()
         {
-            
+            resultPage.ClickOnTheFirstResult();  
         }
 
         [When(@"I select ""(.*)"" as the quantity of my choice")]
@@ -86,5 +88,9 @@ namespace AmazonProject.StepDefinition
            
         }
 
+    }
+
+    internal class SearchButton
+    {
     }
 }
