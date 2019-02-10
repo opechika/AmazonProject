@@ -47,7 +47,7 @@ namespace AmazonProject.StepDefinition
         }
 
         [When(@"I select ""(.*)"" as the quantity of my choice")]
-        public void WhenISelectAsTheQuantityOfMyChoice(int p0)
+        public void WhenISelectAsTheQuantityOfMyChoice(string qty)
         {
            
         }
