@@ -78,7 +78,10 @@
     <Compile Include="Helper\BaseClass.cs" />
     <Compile Include="Hooks\AmazonHooks.cs" />
     <Compile Include="Pages\AmazonHomePage.cs" />
+    <Compile Include="Pages\AmazonProductDetailPage.cs" />
+    <Compile Include="Pages\EditBasketPage.cs" />
     <Compile Include="Pages\ResultPage.cs" />
+    <Compile Include="Pages\ShoppingBasketPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StepDefinition\AmazonBasketSteps.cs" />
   </ItemGroup>

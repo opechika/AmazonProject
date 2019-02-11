@@ -15,12 +15,13 @@ namespace AmazonProject.Helper
     {
         public static IWebDriver driver { get; set; }
         private static SelectElement select;
-
+        private static WebDriverWait wait;
 
         static BaseClass()
         {
             driver = null;
             select = null;
+            wait = null;
         }
 
 
@@ -42,6 +43,17 @@ namespace AmazonProject.Helper
             select.SelectByText(text);
         }
 
+        public static void WaitForElementToBeClickable(IWebElement element)
+        {
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(30));
+            wait.Until(ExpectedConditions.ElementToBeClickable(element));
+        }
+
+        public static void ScrollToTheBottomOfThePage()
+        {
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollTo(0, document.body.scrollHeight)");
+        }
 
         public static void LaunchBrowser(String browser)
         {
