@@ -25,10 +25,12 @@ namespace AmazonProject.Pages
             Assert.True(searchResult.Count > 0);
         }
 
-        public void ClickOnTheFirstResult()
+        public AmazonProductDetailPage ClickOnTheFirstResult()
         {
             searchResult = GetElementsByCssSelector(".a-size-medium.s-inline.s-access-title.a-text-normal");
             searchResult.ElementAt(0).Click();
+
+            return new AmazonProductDetailPage();
         }
     }
 }

@@ -10,19 +10,19 @@ Scenario: Customer can add an Item to Basket
 	And i click on submit button
 	And the result of "echo dot" is displayed
 	And I select the echo dot of my choice
-	And I select "1" as the quantity of my choice
+	And I select "2" as the quantity of my choice
 	And I click on add to basket button
 	Then "echo dot" is added to the basket
 
 Scenario: Customer can delete an Item from Basket
 	Given I am on Amazon homepage
-	When I enter "echo dot" in the search bar
+	When I enter "samsung s8 charger" in the search bar
 	And i click on submit button
-	And the result of "echo dot" is displayed
+	And the result of "samsung s8 charger" is displayed
 	And I select the echo dot of my choice
-	And I select "1" as the quantity of my choice
+	And I select "2" as the quantity of my choice
 	And I click on add to basket button
-	And "echo dot" is added to the basket
+	And "samsung s8 charger" is added to the basket
 	And I click on the basket icon
 	And I click on delete link
-	Then echo do is deleted from the basket
+	Then "samsung s8 charger" is deleted from the basket
