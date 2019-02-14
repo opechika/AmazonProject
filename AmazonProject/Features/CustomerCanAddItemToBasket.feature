@@ -22,7 +22,7 @@ Scenario: Customer can delete an Item from Basket
 	And I select the echo dot of my choice
 	And I select "2" as the quantity of my choice
 	And I click on add to basket button
-	And "samsung s8 charger" is added to the basket
+	#And "samsung s8 charger" is added to the basket
 	And I click on the basket icon
 	And I click on delete link
 	Then "samsung s8 charger" is deleted from the basket

@@ -40,7 +40,7 @@ namespace AmazonProject.Pages
 
         private void CloseItemPopUp()
         {
-            closePopUp = GetElementByCssSelector(".a-icon.a-icon-close");
+            closePopUp = GetElementByCssSelector("i.a-icon.a-icon-close");
             closePopUp.Click();
         }
        }

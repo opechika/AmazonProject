@@ -84,16 +84,11 @@ namespace AmazonProject.StepDefinition
             shoppingBasketPage.DeleteItem();
         }
 
-        [Then(@"echo do is deleted from the basket")]
-        public void ThenEchoDoIsDeletedFromTheBasket()
-        {
-           
-        }
-
+   
         [Then(@"""(.*)"" is deleted from the basket")]
-        public void ThenIsDeletedFromTheBasket(string p0)
+        public void ThenIsDeletedFromTheBasket(string item)
         {
-            
+         shoppingBasketPage.IsShoppingBasketEmpty();   
         }
 
 
