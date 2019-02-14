@@ -120,8 +120,6 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I select \"2\" as the quantity of my choice", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 24
  testRunner.And("I click on add to basket button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 25
- testRunner.And("\"samsung s8 charger\" is added to the basket", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
  testRunner.And("I click on the basket icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 27
